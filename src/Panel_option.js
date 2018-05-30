@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Panel_options.css';
 
+
 class Panel_options extends Component{
     render(){
         return(

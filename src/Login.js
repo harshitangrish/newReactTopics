@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './Login.css';
 import Helper from './Helper';
+import cookie from 'react-cookies';
 
 class Login extends Component {
 
@@ -32,6 +33,7 @@ class Login extends Component {
 
         res.then((res)=>{
             if(res.access_token !== undefined){
+                cookie.save('token',res.access_token);
                 this.props.history.push('/dashboard');
             }
             else{
